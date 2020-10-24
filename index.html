@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four</title>
+    <style>
+        body {
+            overflow: hidden;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #A1CDA8;
+        }
+
+        .wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper form {
+            padding: 20px;
+            border-radius: 6px;
+            background-color: #C5E7E2;
+            width: 360px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .wrapper form input[type="file"] {
+            width: fit-content;
+            border: none;
+        }
+
+        .wrapper form textarea,
+        .wrapper form input {
+            margin-bottom: 10px;
+            padding: 13px 0 13px 8px;
+            border: 1px solid #A1CDA8;
+            border-radius: 3px;
+        }
+
+        .wrapper form textarea:focus,
+        .wrapper form input:focus {
+            outline: none;
+        }
+
+        .wrapper form textarea::placeholder,
+        .wrapper form input::placeholder {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #888888;
+        }
+
+        .wrapper form textarea {
+            resize: vertical;
+            min-height: 30px;
+            max-height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <form action="http://httpbin.org/post" method="POST" enctype="multipart/form-data">
+            <input type="text" name="firstname" placeholder="Firstname">
+            <input type="text" name="lastname" placeholder="Lastname">
+            <input type="text" name="group" placeholder="Group">
+            <textarea name="message" placeholder="Message"></textarea>
+            <input type="file" name="myimg">
+        </form>
+    </div>
+
+</body>
+
+</html>
